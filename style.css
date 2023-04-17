@@ -68,6 +68,17 @@ h2 {
   padding-right: 2%;
 }
 
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15%;
+}
+
+a {
+  text-decoration: none;
+  color: #505f79;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -82,11 +93,6 @@ nav {
 
 nav #mainMenu {
   display: flex;
-}
-
-a {
-  text-decoration: none;
-  color: #505f79;
 }
 
 nav #mainMenu li a {
@@ -111,6 +117,10 @@ nav .openMenu {
   cursor: pointer;
 }
 
+.closeMenu {
+  color: #67798e;
+}
+
 nav #mainMenu .closeMenu {
   display: none;
   font-size: 2rem;
@@ -130,10 +140,6 @@ nav #mainMenu .closeMenu {
     background: #fff;
     transition: top 1s ease;
     display: none;
-  }
-
-  .closeMenu {
-    color: #67798e;
   }
 
   nav #mainMenu .closeMenu {
@@ -246,12 +252,6 @@ p {
   flex-direction: column;
 }
 
-.opt1 {
-  padding-top: 15%;
-  display: flex;
-  flex-direction: column;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -286,6 +286,7 @@ p {
   justify-content: center;
   text-align: center;
   flex-direction: column;
+  height: fit-content;
   margin: 2rem 7%;
 }
 
@@ -302,7 +303,7 @@ button:hover {
 
 h3 {
   font-family: Poppins, sans-serif;
-  font-weight: 700;
+  font-weight: 700px;
   line-height: 52px;
   text-align: center;
   color: #172b4d;
@@ -317,6 +318,7 @@ h3 {
 }
 
 .langs {
+  min-width: fit-content;
   padding: 0.3rem;
   border: none;
   margin: 0 auto;
@@ -450,8 +452,10 @@ form {
     background-image: none;
   }
 
-  .opt1 {
+  .menuItems {
     display: flex;
+    flex-direction: row;
+    padding-top: 0%;
   }
 
   .my-work {
