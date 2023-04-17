@@ -450,6 +450,10 @@ form {
     background-image: none;
   }
 
+  .opt1 {
+    display: flex;
+  }
+
   .my-work {
     display: flex;
     justify-content: center;
