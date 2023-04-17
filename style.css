@@ -286,7 +286,6 @@ p {
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  height: fit-content;
   margin: 2rem 7%;
 }
 
@@ -303,7 +302,7 @@ button:hover {
 
 h3 {
   font-family: Poppins, sans-serif;
-  font-weight: 700px;
+  font-weight: 700;
   line-height: 52px;
   text-align: center;
   color: #172b4d;
@@ -318,7 +317,6 @@ h3 {
 }
 
 .langs {
-  min-width: fit-content;
   padding: 0.3rem;
   border: none;
   margin: 0 auto;
