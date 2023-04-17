@@ -167,6 +167,6 @@ Give a ⭐️ if you like this project and how I managed to build it!
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/yashodhicy/Microverseday3pr/blob/add-license-1/LICENSE) licensed.
+This project is [MIT](https://github.com/Ochiengsteven/PORTFOLIO-M/blob/mobile-menu/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
