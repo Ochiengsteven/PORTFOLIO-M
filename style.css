@@ -68,6 +68,21 @@ h2 {
   padding-right: 2%;
 }
 
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15%;
+}
+
+.menu {
+  font-family: Inter, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #505f79;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -104,6 +119,10 @@ nav .openMenu {
   font-size: 2rem;
   margin: 20px;
   cursor: pointer;
+}
+
+.closeMenu {
+  color: #67798e;
 }
 
 nav #mainMenu .closeMenu {
@@ -433,6 +452,12 @@ form {
 @media screen and (min-width: 768px) {
   footer {
     background-image: none;
+  }
+
+  .menuItems {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0%;
   }
 
   .my-work {
