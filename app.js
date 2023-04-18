@@ -37,7 +37,7 @@ form.addEventListener('submit', (event) => {
 
     const errorMessage = document.createElement('p');
     const formText = document.querySelector('#form textarea');
-    errorMessage.textContent = 'Please enter your email in lower case.Your form is not submitted.';
+    errorMessage.textContent = 'Please enter your email in lower case!';
     errorMessage.classList.add('error-message');
 
     formText.insertAdjacentElement('afterend', errorMessage);
