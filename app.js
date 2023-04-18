@@ -45,28 +45,40 @@ form.addEventListener('submit', (event) => {
 });
 
 // Store form data in localStorage
-// Select the form element
-const form1 = document.querySelector('#form');
+// Select the input elements
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#mail');
+const messageInput = document.querySelector('#msg');
 
-// Listen for the form submit event
-form1.addEventListener('submit', (event) => {
-  event.preventDefault(); // Prevent default form submission behavior
-
+// Define the storeFormData function
+function storeFormData() {
   // Get form input values
-  const name = document.querySelector('#name').value;
-  const email = document.querySelector('#mail').value;
-  const message = document.querySelector('#msg').value;
+  const name = nameInput.value;
+  const email = emailInput.value;
+  const message = messageInput.value;
 
-  // Create a JavaScript object to hold the form data
-  const form1Data = {
+  // JavaScript object to hold the form data
+  const formData = {
     name,
     email,
     message,
   };
 
-  // Store the form data in local-Storage
-  localStorage.setItem('form1Data', JSON.stringify(form1Data));
+  // Store the form data in localStorage
+  localStorage.setItem('form1Data', JSON.stringify(formData));
+}
 
-  // Reset the form
-  form.reset();
+// Retrieve form data from localStorage on page load
+window.addEventListener('load', () => {
+  const formData = JSON.parse(localStorage.getItem('form1Data'));
+  if (formData) {
+    nameInput.value = formData.name;
+    emailInput.value = formData.email;
+    messageInput.value = formData.message;
+  }
 });
+
+// Listen for changes in the input fields
+nameInput.addEventListener('input', storeFormData);
+emailInput.addEventListener('input', storeFormData);
+messageInput.addEventListener('input', storeFormData);
