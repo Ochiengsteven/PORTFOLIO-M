@@ -64,7 +64,7 @@ form1.addEventListener('submit', (event) => {
     message,
   };
 
-  // Store the form data in localStorage
+  // Store the form data in local-Storage
   localStorage.setItem('form1Data', JSON.stringify(form1Data));
 
   // Reset the form
