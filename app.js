@@ -38,8 +38,9 @@ form.addEventListener('submit', (event) => {
     const errorMessage = document.createElement('p');
     const formText = document.querySelector('#form textarea');
     errorMessage.textContent = 'Please enter your email in lower case!';
+    errorMessage.style.color = '#ff3f00';
     errorMessage.classList.add('error-message');
-
+    
     formText.insertAdjacentElement('afterend', errorMessage);
   }
 });
