@@ -58,14 +58,14 @@ form1.addEventListener('submit', (event) => {
   const message = document.querySelector('#msg').value;
 
   // Create a JavaScript object to hold the form data
-  const formData = {
+  const form1Data = {
     name,
     email,
     message,
   };
 
   // Store the form data in localStorage
-  localStorage.setItem('formData', JSON.stringify(formData));
+  localStorage.setItem('form1Data', JSON.stringify(form1Data));
 
   // Reset the form
   form.reset();
