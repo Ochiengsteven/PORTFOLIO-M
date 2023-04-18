@@ -43,3 +43,30 @@ form.addEventListener('submit', (event) => {
     formText.insertAdjacentElement('afterend', errorMessage);
   }
 });
+
+// Store form data in localStorage
+// Select the form element
+const form1 = document.querySelector('#form');
+
+// Listen for the form submit event
+form1.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  // Get form input values
+  const name = document.querySelector('#name').value;
+  const email = document.querySelector('#mail').value;
+  const message = document.querySelector('#msg').value;
+
+  // Create a JavaScript object to hold the form data
+  const formData = {
+    name,
+    email,
+    message,
+  };
+
+  // Store the form data in localStorage
+  localStorage.setItem('formData', JSON.stringify(formData));
+
+  // Reset the form
+  form.reset();
+});
