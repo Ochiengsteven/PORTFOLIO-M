@@ -29,7 +29,7 @@ form.addEventListener('submit', (event) => {
   if (emailText.value !== emailText.value.toLowerCase()) {
     event.preventDefault();
 
-    // Remove previous error messages
+    // Remove previous error message
     const previousErrorMessage = form.querySelector('.error-message');
     if (previousErrorMessage) {
       form.removeChild(previousErrorMessage);
@@ -40,7 +40,6 @@ form.addEventListener('submit', (event) => {
     errorMessage.textContent = 'Please enter your email in lower case!';
     errorMessage.style.color = '#ff3f00';
     errorMessage.classList.add('error-message');
-    
     formText.insertAdjacentElement('afterend', errorMessage);
   }
 });
