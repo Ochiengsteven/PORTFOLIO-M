@@ -29,7 +29,7 @@ form.addEventListener('submit', (event) => {
   if (emailText.value !== emailText.value.toLowerCase()) {
     event.preventDefault();
 
-    // Remove previous error messages
+    // Remove previous error message
     const previousErrorMessage = form.querySelector('.error-message');
     if (previousErrorMessage) {
       form.removeChild(previousErrorMessage);
@@ -38,47 +38,8 @@ form.addEventListener('submit', (event) => {
     const errorMessage = document.createElement('p');
     const formText = document.querySelector('#form textarea');
     errorMessage.textContent = 'Please enter your email in lower case!';
+    errorMessage.style.color = '#ff3f00';
     errorMessage.classList.add('error-message');
-
     formText.insertAdjacentElement('afterend', errorMessage);
   }
 });
-
-// Store form data in localStorage
-// Select the input elements
-const nameInput = document.querySelector('#name');
-const emailInput = document.querySelector('#mail');
-const messageInput = document.querySelector('#msg');
-
-// Define the storeFormData function
-function storeFormData() {
-  // Get form input values
-  const name = nameInput.value;
-  const email = emailInput.value;
-  const message = messageInput.value;
-
-  // JavaScript object to hold the form data
-  const formData = {
-    name,
-    email,
-    message,
-  };
-
-  // Store the form data in localStorage
-  localStorage.setItem('form1Data', JSON.stringify(formData));
-}
-
-// Retrieve form data from localStorage on page load
-window.addEventListener('load', () => {
-  const formData = JSON.parse(localStorage.getItem('form1Data'));
-  if (formData) {
-    nameInput.value = formData.name;
-    emailInput.value = formData.email;
-    messageInput.value = formData.message;
-  }
-});
-
-// Listen for changes in the input fields
-nameInput.addEventListener('input', storeFormData);
-emailInput.addEventListener('input', storeFormData);
-messageInput.addEventListener('input', storeFormData);
