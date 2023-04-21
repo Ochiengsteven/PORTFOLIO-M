@@ -1,271 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steven's portfolio</title>
     <link rel="stylesheet" href="style.css">
-     
-    <!--google fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter&display=swap">
-    
-    <!--fontawesome icons-->
-    <script src="https://kit.fontawesome.com/27be2fb22c.js" crossorigin="anonymous"></script>
-
+    <script defer src="projectdata.js"></script>
+    <title>My Portfolio</title>
 </head>
+
 <body>
-<div class="container-body">
-    <!--nav-->
-    <header class="app-header">
-        <nav>
-            <div class="openMenu"><i class="fa-solid fa-bars"></i></div>
-            <div class="menu">
-                    <ul id="mainMenu" class="list">
-                        <div class="menuItems">
-                            <li><a href="#my-work">Portfolio</a></li>
-                            <li><a href="#about-me">About</a></li>
-                            <li><a href="#contact-me">Contact</a></li>
-                        </div>
-                        <div class="closeMenu"><i class="fa fa-times"></i></div>
-                    </ul>
-            </div>
+    <header>
+        <nav id="mobile-nav">
+            <button class="menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
         </nav>
+        <button id="cancel-btn" class="hide"></button>
     </header>
-    <section class="app-wrap">
-        <div class="container">
 
-            <!--main-->
-            <section class="headline">
-                <div class="heading">
-                    <h1 class="intro1">Hey there.</h1>
-                    <h1 class="intro2">I’m Steve</h1>
-                </div>
-                <h1 class="career">I’m a Software<br>Developer</h1>
-                <p>I can help you build a product, feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, 
-                    don’t hesitate to contact me.
-                </p>
-            </section>
-
-            <!--icons-->
-            <section class="social">
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin-in fa-xl"></i></a></li>
-                    <li><a href="#"><i class="fa-regular fa-hand-peace fa-xl"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-github fa-xl"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-m fa-xl"></i></a></li>
+    <main>
+        <section id="container">
+            <nav id="desktop-nav" class="mobile-menu">
+                <ul id="mobilelist">
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#container2">About</a></li>
+                    <li><a href="#contact-form">Contact</a></li>
                 </ul>
-            </section>
+            </nav>
+            <div class="intro">
+                <div class="aboutme">
+                    <h1>Hey there.
+                        I’m Steven.</h1>
+                    <h2 class="job"> I’m a software developer</h2>
+                    <p> I can help you build a product , feature or website Look through some of my work and experience!
+                        If you like what you see and have a project you need coded,
+                        don’t hesitate to contact me.</p>
+                </div>
+                <div class="icon-bar">
+                    <ul>
+                        <li><i><a class="iconan" href="https://www.twitter.com"><img src="images/twitter.png"
+                                        alt="twitter logo"> </a></i></li>
+                        <li><i> <a class="iconan" href="https://www.Linkedin.com"><img src="images/Linkedin icon.png"
+                                        alt="Linkedin logo"></a></i></li>
+                        <li><i> <a class="iconan" href="https://www.Medium.com"><img src="images/medium.png"
+                                        alt="medium logo"></a></i></li>
+                        <li><i> <a class="iconan" href="https://www.github.com"><img src="images/github.png"
+                                        alt="github logo"></a></i></li>
+                        <li><i> <a class="iconan" href="www.angellist.com"><img src="images/angellist.png"
+                                        alt="angellist logo"></a></i></li>
+                    </ul>
+                </div>
+                <button id="action"></button>
+            </div>
+        </section>
 
-            <!--arrow-->
-                <a href="#" class="next-page"><i class="fa-solid fa-angle-down fa-xl"></i></a>
+        <div id="topic">
+            <h2>My Recent Works</h2>
+            <div class="line2"></div>
+        </div>
+
+        <!-- popup -->
+        <!-- <div id="popup-overlay"></div> -->
+        <div id="popup" class="hide">
+            <button id="cancel-btn2"></button>
             
-        
-        </div>
-    </section>
-</div>
-
-    <!--work section-->
-    <section id="my-work" class="my-work">
-        <div class="grid container">
-            <div id="heading" class="heading">
-                <h3 class="intro1">My Recent Works</h3>
-                <div class="second"></div>
+            <img id="popup-image">
+            <div id="content">
+            <div id="primary-text">
+            <h2 id="popup-title">test</h2>
+            <ul id="popup-techs"></ul>
             </div>
-            <section class="works">
-                <div class="work-item">
-                    <img src="images/work1.png" alt="">
-                    <div class="work-item-content">
-                        <h2>Multi-Post Stories<br>Gain+Glory</h2>
-                        <ul>
-                            <li class="langs"><button> Ruby on Rails</button></li>
-                            <li class="langs"><button>  CSS</button></li>
-                            <li class="langs"><button> JavaScript</button></li>
-                            <li class="langs"><button> HTML</button></li>
-                        </ul>
-                        <a href="#">
-                            <button class="btn2">See Project</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <img src="images/work1.png" alt="">
-                    <div class="work-item-content">
-                        <h2>Multi-Post Stories<br>Gain+Glory</h2>
-                        <ul>
-                            <li class="langs"><button> Ruby on Rails</button></li>
-                            <li class="langs"><button>  CSS</button></li>
-                            <li class="langs"><button> JavaScript</button></li>
-                            <li class="langs"><button> HTML</button></li>
-                        </ul>
-                        <a href="#">
-                            <button class="btn2">See Project</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <img src="images/work1.png" alt="">
-                    <div class="work-item-content">
-                        <h2>Multi-Post Stories<br>Gain+Glory</h2>
-                        <ul>
-                            <li class="langs"><button> Ruby on Rails</button></li>
-                            <li class="langs"><button>  CSS</button></li>
-                            <li class="langs"><button> JavaScript</button></li>
-                            <li class="langs"><button> HTML</button></li>
-                        </ul>
-                        <a href="#">
-                            <button class="btn2">See Project</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <img src="images/work1.png" alt="">
-                    <div class="work-item-content">
-                        <h2>Multi-Post Stories<br>Gain+Glory</h2>
-                        <ul>
-                            <li class="langs"><button> Ruby on Rails</button></li>
-                            <li class="langs"><button>  CSS</button></li>
-                            <li class="langs"><button> JavaScript</button></li>
-                            <li class="langs"><button> HTML</button></li>
-                        </ul>
-                        <a href="#">
-                            <button class="btn2">See Project</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <img src="images/work1.png" alt="">
-                    <div class="work-item-content">
-                        <h2>Multi-Post Stories<br>Gain+Glory</h2>
-                        <ul>
-                            <li class="langs"><button> Ruby on Rails</button></li>
-                            <li class="langs"><button>  CSS</button></li>
-                            <li class="langs"><button> JavaScript</button></li>
-                            <li class="langs"><button> HTML</button></li>
-                        </ul>
-                        <a href="#">
-                            <button class="btn2">See Project</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <img src="images/work1.png" alt="">
-                    <div class="work-item-content">
-                        <h2>Multi-Post Stories<br>Gain+Glory</h2>
-                        <ul>
-                            <li class="langs"><button> Ruby on Rails</button></li>
-                            <li class="langs"><button>  CSS</button></li>
-                            <li class="langs"><button> JavaScript</button></li>
-                            <li class="langs"><button> HTML</button></li>
-                        </ul>
-                        <a href="#">
-                            <button class="btn2">See Project</button>
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </section>
-
-<section class="profile">
-
-    <!-- about section -->
-    <section id="about-me">
-        <div class="about-me">
-            <div class="about-me-content">
-                <h3>About me</h3>
-                <p>Hello I’m a software developer! I can help you build a product, feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
+            <p id="popup-description"></p>
+            <div class="button-group">
+                <button id="popup-livelink" class="button linkbutton">See Live<img class="livelink" src="images/seelive.png"></button>
+                <button id="popup-source" class="button linkbutton">See Source<img class="livelink" src="images/gitwhite.png"></button>
             </div>
-            <a href="#">
-                <button class="btn2">Get my resume</button>
-            </a>
-        </div>
-    </section>
-    <section class="summary">
-        
-        <!-- languages -->
-        <div class="summary-card">
-            <div class="image">
-                <img src="icon-languages.svg">
             </div>
-            <h2>Languages</h2>
-            <ul>
-                <li class="list"><button class="tech"> JavaScript</button></li>
-                <li class="list"><button class="tech">  Ruby</button></li>
-                <li class="list"><button class="tech"> HTML</button></li>
-                <li class="list"><button class="tech"> CSS</button></li>
-            </ul> 
         </div>
-
-        <!-- frameworks -->
-        <div class="summary-card">
-            <div class="image">
-                <img src="icon-frameworks.svg">
+        <!-- end of the popup menu -->
+        <section id="container2">
+            <div class="aboutme">
+                <h2>About me</h2>
+                <p>
+                    I can help you build a product , feature or website Look through some of my work and experience! If
+                    you like what you see and have a project you need coded,
+                    don’t hesitate to contact me.
+                    Get my resume
+                </p>
+                <a class="project-ancor" href="https://github.com/yashodhicy/Microverseday3pr">
+                    <button class="see_project">Get my resume</button>
+                </a>
             </div>
-            <h2>Frameworks </h2>
-            <ul>
-                <li class="list"><button class="tech"> React.js</button></li>
-                <li class="list"><button class="tech"> Ruby on Rails</button></li>
-                <li class="list"><button class="tech"> RSpec</button></li>
-                <li class="list"><button class="tech"> Capybara</button></li>
-                <li class="list"><button class="tech"> Selenium</button></li>
-            </ul>
-        </div>
+            <div class="background2"></div>
+        </section>
 
-        <!-- skills -->
-        <div class="summary-card">
-            <div class="image">
-                <img src="icon-skills.svg">
+        <section class="work">
+            <div class="work-card2">
+                <div class="image">
+                    <img src="images/icon-languages.png" alt="logo languages">
+                </div>
+                <h3>Languages</h3>
+                <ul>
+                    <li class="list"><button class="but"> JavaScript</button></li>
+                    <li class="list"><button class="but"> Ruby</button></li>
+                    <li class="list"><button class="but"> HTML</button></li>
+                    <li class="list"><button class="but"> CSS</button></li>
+                </ul>
             </div>
-            <h2>Skills</h2>
-            <ul>
-                <li class="list"><button class="tech"> Database Management</button></li>
-                <li class="list"><button class="tech">  Version control</button></li>
-                <li class="list"><button class="tech"> CLI</button></li>
-                <li class="list"><button class="tech"> Web Development</button></li>
-                <li class="list"><button class="tech"> API design</button></li>
-            </ul>
-    
-        </div>
-    </section>
-</section>
-<footer>
-    <!--Contact form -->
-    <section id="contact-me" class="container-form">
-        <div class="intro-form">
-            <h3>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h3>
-        </div>
-        <div class="contact-form">
-            <form action="https://formspree.io/f/xlekprnl" method="post">
-                    
-                        <input type="text" maxlength="30" id="name" name="user_name" placeholder="Full name" required/>
-                
-                        <input type="email" id="mail" name="user-email" placeholder="Email address" required/>
-                    
-                        <textarea name="user-message" maxlength="500" id="msg" cols="50" rows="5" placeholder="Hey I’d like to connect to..." required></textarea>
-                        <button class="btn2" type="submit">Get in touch</button>
+            <div class="work-card2">
+                <div class="image">
+                    <img src="images/icon-frameworks.png" alt="logo frameworks">
+                </div>
+                <h3>Frameworks </h3>
+                <ul>
+                    <li class="list"><button class="but"> React.js</button></li>
+                    <li class="list"><button class="but"> Ruby on Rails</button></li>
+                    <li class="list"><button class="but"> RSpec</button></li>
+                    <li class="list"><button class="but"> Capybara</button></li>
+                    <li class="list"><button class="but"> Selenium</button></li>
+                </ul>
+            </div>
+            <div class="work-card2">
+                <div class="image">
+                    <img src="images/icon-skills.png" alt="logo skills">
+                </div>
+                <h3>Skills</h3>
+                <ul>
+                    <li class="list"><button class="but"> Database Management</button></li>
+                    <li class="list"><button class="but"> Version control</button></li>
+                    <li class="list"><button class="but"> CLI</button></li>
+                    <li class="list"><button class="but"> Web Development</button></li>
+                    <li class="list"><button class="but"> API design</button></li>
+                </ul>
+            </div>
+        </section>
 
+        <!-- contact-form -->
+
+        <section id="contact-form">
+            <h2 id="msg">I'm always interested in hearing about new projects, so if you'd like to chat please get in
+                touch.</h2>
+            <form id="form" action="https://formspree.io/f/xlekprob" method="post">
+                <input type="text" placeholder="Full name" maxlength="30" name="username" required
+                    title="Please enter your name.">
+                <input type="email" placeholder="Email address" name="email" required itle="Please enter your email.">
+                <textarea name="message" maxlength="500" placeholder="Hey I'd like to connect to" required></textarea>
+                <button type="submit">Get in touch</button>
+                <a href="#">stevenochieng6305@gmail.com</a>
             </form>
+            <div class="formbackground1"></div>
+            <div class="formbackground2"></div>
+            <div class="formbackground3"></div>
+        </section>
+        <footer>
+            <div class="icon-bar">
+                <ul>
+                    <li><i><a class="iconan" href="https://www.twitter.com"><img src="images/twitter.png"
+                                    alt="twitter logo">
+                            </a></i></li>
+                    <li><i> <a class="iconan" href="https://www.Linkedin.com"><img src="images/Linkedin icon.png"
+                                    alt="Linkedin logo"></a></i></li>
+                    <li><i> <a class="iconan" href="https://www.Medium.com"><img src="images/medium.png"
+                                    alt="medium logo"></a></i></li>
+                    <li><i> <a class="iconan" href="https://www.github.com"><img src="images/github.png"
+                                    alt="github logo"></a></i></li>
+                    <li><i> <a class="iconan" href="www.angellist.com"><img src="images/angellist.png"
+                                    alt="angellist logo"></a></i></li>
+                </ul>
+            </div>
+            <div class="line3"></div>
+        </footer>
+    </main>
 
-        </div>
-    </section>
-
-    <div class="my-mail">
-        <p>steven6305@gmail.com</p>
-    </div>
-
-    <section class="social">
-        <ul>
-            <li><a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin-in fa-xl"></i></a></li>
-            <li><a href="#"><i class="fa-regular fa-hand-peace fa-xl"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-github fa-xl"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-m fa-xl"></i></a></li>
-        </ul>
-    </section>
-    <div class="line"></div>
-</footer>
-<script src="./app.js"></script>
 </body>
+
 </html>
